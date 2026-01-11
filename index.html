@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Hosting & Layanan Digital</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #3498db, #f39c12);
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 20%;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            text-align: left;
+            position: fixed;
+            height: 100vh;
+            font-size: 16px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 3000;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .sidebar.show {
+            transform: translateX(0);
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #f39c12;
+            color: #ffffff;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            z-index: 4000;
+        }
+        .toggle-btn.hidden {
+            display: none;
+        }
+        .close-btn {
+            display: block;
+            margin-bottom: 15px;
+            background: #f39c12;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .store-name {
+            color: #000000;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px auto 0;
+        }
+        .store-logo {
+            width: 80px;
+            height: auto;
+            margin: 5px auto;
+            display: block;
+        }
+        .menu-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+            background: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            display: block;
+            font-weight: bold;
+            transition: border-bottom 0.5s;
+            text-align: center;
+        }
+        .menu-links a:hover {
+            border-bottom: 2px solid #ffffff;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .btn {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            background: #f39c12;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #e67e22;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .banner-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner-slider {
+            display: flex;
+            width: 100%;
+            animation: slideBanner 9s infinite;
+        }
+        .banner-slider img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        @keyframes slideBanner {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.querySelector(".sidebar");
+            const toggleBtn = document.querySelector(".toggle-btn");
+            sidebar.classList.toggle("show");
+            toggleBtn.classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+    <div class="store-name">Lex Store</div>
+    </div>
+
+    <div class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖ Tutup</button>
+        <h2>Menu</h2>
+        <div class="menu-links">
+            <a href="#">Beranda</a>
+            <a href="info-owner.html">Info Owner</a>
+            <a href="sosmed-owner.html">Sosmed Owner</a>
+            <a href="payment-owner.html">Payment Owner</a>
+            <a href="join-group.html">Join Grup</a>
+            <a href="testimoni.html">Testimoni</a>
+            <a href="maingame.html">Main Game</a>
+        </div>
+    </div>
+
+    <style>
+    .container h1 {
+        font-family: 'Georgia', serif;
+        color: #3D2C8D; /* warna biru terang */
+        font-size: 2.5em;
+        text-align: center;
+        -webkit-text-stroke: 1px #3D2C8D; /* garis pinggir biru gelap */
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* sedikit bayangan */
+    }
+</style>
+
+<div class="container">
+    <h1>Paket Hosting & Layanan Digital</h1>
+</div>
+
+        <div class="card">
+    <img src="https://files.catbox.moe/fy5vpd.png" alt="Hosting Minecraft" style="width: 100%; border-radius: 10px;">
+    <h2>Hosting Minecraft</h2>
+    <p>Server game stabil & berkualitas</p>
+    <p><strong>Stok Tersedia:</strong> 7</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produk+Hosting+Minecraft" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Hosting+Minecraft" class="btn">Pesan Sekarang</a>
+</div>
+
+<div class="card">
+    <img src="https://files.catbox.moe/ipdpbg.png" alt="Panel Bot WA" style="width: 100%; border-radius: 10px;">
+    <h2>Panel Bot WA</h2>
+    <p>Manager Server Bot dengan fitur lengkap</p>
+    <p><strong>Stok Tersedia:</strong> 15</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produk+Panel+Bot+WA" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Panel+Bot+WA" class="btn">Pesan Sekarang</a>
+</div>
+
+<div class="card">
+    <img src="https://files.catbox.moe/bztzq5.png" alt="Reseller Panel" style="width: 100%; border-radius: 10px;">
+    <h2>Reseller Panel</h2>
+    <p>Paket reseller untuk bisnis Anda</p>
+    <p><strong>Stok Tersedia:</strong> 6</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produk+Reseller+Panel" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Reseller+Panel" class="btn">Pesan Sekarang</a>
+</div>
+
+<div class="card">
+    <img src="https://files.catbox.moe/s0ce18.jpg" alt="Jasa Fix/Rename Script" style="width: 100%; border-radius: 10px;">
+    <h2>Jasa Fix/Rename Script</h2>
+    <p>Perbaikan dan penyesuaian script</p>
+    <p><strong>Stok Tersedia:</strong> 99+</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produk+Jasa+Fix+Rename+Script" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Jasa+Fix+Rename+Script" class="btn">Pesan Sekarang</a>
+</div>
+
+<div class="card">
+    <img src="https://files.catbox.moe/45cl7b.jpg" alt="Sewa Bot WhatsApp" style="width: 100%; border-radius: 10px;">
+    <h2>Sewa Bot WhatsApp</h2>
+    <p>Fitur Bot Yang Bermacam Macam</p>
+    <p><strong>Stok Tersedia:</strong> 13</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produk+Sewa+Bot+Wa" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Sewa+Bot+Wa" class="btn">Pesan Sekarang</a>
+</div>
+
+<div class="card">
+    <div class="slider" style="position: relative; width: 100%; height: auto; overflow: hidden;">
+        <img src="https://files.catbox.moe/j8weyh.jpg" class="slide" style="width: 100%; border-radius: 10px; display: none;">
+    </div>
+    <h2>Sewa Website Jualan</h2>
+    <p>Desain Yang Modern Untuk Store Anda</p>
+    <p><strong>Stok Tersedia:</strong> 5</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produk+Sewa+Web+Jualan" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Sewa+Web+Jualan" class="btn">Pesan Sekarang</a>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Ganti gambar setiap 3 detik
+}
+</script>
+
+<div class="card">
+    <div class="slider" style="position: relative; width: 100%; height: auto; overflow: hidden;">
+        <img src="https://files.catbox.moe/j8weyh.jpg" class="slide" style="width: 100%; border-radius: 10px; display: none;">
+    </div>
+    <h2>Script Website Store</h2>
+    <p>Desain Yang Modern Untuk Store Anda No Enc 100%</p>
+    <p><strong>Stok Tersedia:</strong> 5</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produkScript+Web+Jualan" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Script+Web+Jualan" class="btn">Pesan Sekarang</a>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Ganti gambar setiap 3 detik
+}
+</script>
+
+<div class="card">
+    <img src="https://files.catbox.moe/3d6ugi.jpg" alt="Nokos Whatsapp" style="width: 100%; border-radius: 10px;">
+    <h2>Nokos Whatsapp</h2>
+    <p>Nomor Wa Berbagai Negara</p>
+    <p><strong>Stok Tersedia:</strong> 5</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produk+Nokos+Wa" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Nokos+Wa" class="btn">Pesan Sekarang</a>
+</div>
+
+<div class="card">
+    <img src="https://files.catbox.moe/qr1znk.png" alt="Jasa Suntik Sosmed" style="width: 100%; border-radius: 10px;">
+    <h2>Jasa Suntik Sosmed</h2>
+    <p>Suntik Follower Dll Proses Singkat</p>
+    <p><strong>Stok Tersedia:</strong> 99+</p>  
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+suntik+follower" class="btn">Daftar Sekarang</a>
+</div>
+
+<div class="card">
+    <img src="https://files.catbox.moe/p70qi5.jpg" alt="Top Up Game" style="width: 100%; border-radius: 10px;">
+    <h2>Top Up Game</h2>
+    <p>Diamond Termurah Dan Proses Cepat</p>
+    <p><strong>Stok Tersedia:</strong> 99+</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produk+Top+Up+Game" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Top+Up+Game" class="btn">Pesan Sekarang</a>
+</div>
+
+<div class="card">
+    <img src="https://files.catbox.moe/8guwz4.jpg" alt="Jasa Pembuatan Logo" style="width: 100%; border-radius: 10px;">
+    <h2>Jasa Pembuatan Logo</h2>
+    <p>Desain logo profesional</p>
+    <p><strong>Stok Tersedia:</strong> 99+</p>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+cek+harga+produk+Jasa+Pembuatan+Logo" class="btn">Cek Harga</a>
+    <a href="https://wa.me/628872825117?text=Halo%2C+saya+ingin+pesan+produk+Jasa+Pembuatan+Logo" class="btn">Pesan Sekarang</a>
+</div>
+    </div>
+    
+    <div class="banner-container">
+        <div class="banner-slider">
+            <img src="https://files.catbox.moe/jhc3n9.jpg" alt="Banner 1">
+            <img src="https://files.catbox.moe/g3l3ex.jpg" alt="Banner 2">
+            <img src="https://files.catbox.moe/qkiblz.jpg" alt="Banner 3">
+        </div>
+    <div class="footer">
+        <p>&copy; 2026 Bandit Store | Semua Hak Dilindungi</p>
+    </div>
+</body>
+</html>
+
